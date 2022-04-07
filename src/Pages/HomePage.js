@@ -1,5 +1,5 @@
 import "./HomePage.css";
-
+import React from "react";
 
 function HomePage() {
     return (
@@ -24,12 +24,17 @@ function HomePage() {
           </div>
   
           <div className='bloco2'>
-             <div className="numeros">1</div>
-             <div className="numeros">2</div>
-             <div className="numeros">3</div>
-             <div className="numeros">4</div>
-             <div className="numeros">5</div>
-             <div className="numeros">6</div>
+            <div className="blocoNumeros">
+              <div className="numeros">1</div>
+              <div className="numeros">2</div>
+              <div className="numeros">3</div>
+              <div className="numeros">4</div>
+              <div className="numeros">5</div>
+              <div className="numeros">6</div>
+            </div>
+            <div className="blocoDeTexto">
+              <div className="texto">Esse sorteio é meramente ilustrativo e não possui nenhuma ligação com a CAIXA</div>
+            </div>
           </div>
       </div>
     );
