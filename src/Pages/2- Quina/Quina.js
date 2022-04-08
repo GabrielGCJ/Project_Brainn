@@ -1,12 +1,12 @@
-import "./HomePage.css";
+import "./Quina.css";
 import React from "react";
 
-function HomePage() {
+const Quina = () => {
     return (
-      <div className='divmae'>
-          <div className='bloco1'>
+      <div className='divmae-2'>
+          <div className='bloco1-2'>
   
-            <div className='blocoInter'>
+            <div className='blocoInter-2'>
               <div className='botaoselect'>
                 <select name="Mega-Sena" id="Mega-Sena">
                     <option>Mega-Sena</option>
@@ -18,21 +18,20 @@ function HomePage() {
                 </select>
               </div>
               <div>
-                <h1>Loto-mania</h1>
+                <h1>Quina</h1>
               </div>    
             </div>
           </div>
   
-          <div className='bloco2'>
-            <div className="blocoNumeros">
-              <div className="numeros">1</div>
-              <div className="numeros">2</div>
-              <div className="numeros">3</div>
-              <div className="numeros">4</div>
-              <div className="numeros">5</div>
-              <div className="numeros">6</div>
+          <div className='bloco2-2'>
+            <div className="blocoNumeros-2">
+              <div className="numeros-2">1</div>
+              <div className="numeros-2">2</div>
+              <div className="numeros-2">3</div>
+              <div className="numeros-2">4</div>
+              <div className="numeros-2">5</div>
             </div>
-            <div className="blocoDeTexto">
+            <div className="blocoDeText-2">
               <div className="texto">Esse sorteio é meramente ilustrativo e não possui nenhuma ligação com a CAIXA</div>
             </div>
           </div>
@@ -40,4 +39,4 @@ function HomePage() {
     );
   }
   
-  export default HomePage;
+  export default Quina;
