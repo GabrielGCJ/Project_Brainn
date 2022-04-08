@@ -1,0 +1,30 @@
+.imageGame{
+    width: 100%;
+}
+.blocotexto{
+    background-color: rgb(234,223,188);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    border: 7px solid rgb(149,47,54);
+}
+
+.texto{
+    background-color: rgb(234,223,188);
+    border: 7px solid rgb(35,99,108);
+    padding: 5px;
+    border-radius: 15px;
+    
+}
+
+
+
+
+.texto:hover{
+    background-color: rgba(255, 74, 71, 0.5);
+}
+
+.blocotexto:hover{
+    background-color: rgba(35,99,108, 0.5);
+}

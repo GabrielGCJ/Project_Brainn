@@ -1,11 +1,12 @@
 import './App.css';
-import HomePage from './Pages/HomePage';
 import React from 'react';
+import Router from './Routes/Router';
+
 
 const App = () => {
   return (
     <div>
-      <HomePage/>
+      <Router/>
     </div>
   );
 }
