@@ -93,6 +93,7 @@ const MegaSena = () => {
                 </select>
               </div>
               <div>
+                <img src="https://www.mazusoft.com.br/mega/images/logo-mega-sena.png"></img>
                 <h1>Mega-Sena</h1>
               </div>    
             </div>

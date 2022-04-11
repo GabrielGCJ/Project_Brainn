@@ -100,6 +100,7 @@ const DiaDeSorte = () => {
                 </select>
               </div>
               <div>
+                <img src="https://www.mazusoft.com.br/mega/images/logo-mega-sena.png"></img>
                 <h1>DiaDeSorte</h1>
               </div>    
             </div>
@@ -114,11 +115,11 @@ const DiaDeSorte = () => {
               <div className="numeros-6">{numero5}</div>
               <div className="numeros-6">{numero6}</div>
               <div className="numeros-6">{numero7}</div>
-              <div className="numeros-6">{numero8}</div>
+              {/* <div className="numeros-6">{numero8}</div>
               <div className="numeros-6">{numero9}</div>
               <div className="numeros-6">{numero10}</div>
               <div className="numeros-6">{numero11}</div>
-              <div className="numeros-6">{numero12}</div>
+              <div className="numeros-6">{numero12}</div> */}
             </div>
             <div className="blocoDeTexto-6">
               <div className="texto-6">Esse sorteio é meramente ilustrativo e não possui nenhuma ligação com a CAIXA</div>

@@ -91,6 +91,7 @@ const Quina = () => {
                 </select>
               </div>
               <div>
+                <img src="https://www.mazusoft.com.br/mega/images/logo-mega-sena.png"></img>
                 <h1>Quina</h1>
               </div>    
             </div>
