@@ -1,10 +1,46 @@
 import "./LotoFacil.css";
 import React, { useState } from "react";
 import {useHistory} from "react-router-dom"
+import axios from "axios";
+
+
 
 const LotoFacil = () => {
   const history = useHistory()
   const [ PGSelect, setPGSelect ] = useState(1)
+
+
+
+  const ParLotoFacil = () => {
+    const [ numeros, setnumeros ] = useState([])
+  
+    axios.get("https://brainn-api-loterias.herokuapp.com/api/v1/concursos/2200")
+    .then((res) => {
+      setnumeros(res.data.numeros)
+    })
+    .catch((err) =>{
+      ParLotoFacil()
+    })
+    return numeros
+  }
+
+  const numero1 = ParLotoFacil()[0]
+  const numero2 = ParLotoFacil()[1]
+  const numero3 = ParLotoFacil()[2]
+  const numero4 = ParLotoFacil()[3]
+  const numero5 = ParLotoFacil()[4]
+  const numero6 = ParLotoFacil()[5]
+  const numero7 = ParLotoFacil()[6]
+  const numero8 = ParLotoFacil()[7]
+  const numero9 = ParLotoFacil()[8]
+  const numero10 = ParLotoFacil()[9]
+  const numero11 = ParLotoFacil()[10]
+  const numero12 = ParLotoFacil()[11]
+  const numero13 = ParLotoFacil()[12]
+  const numero14 = ParLotoFacil()[13]
+  const numero15 = ParLotoFacil()[14]
+
+
 
 
   const irParaPagina = (url) => {
@@ -21,7 +57,7 @@ const LotoFacil = () => {
     switch (event.target.value) {
       case '0':
         console.log('Recebendo 0');
-        irParaPagina("/")
+        irParaPagina("/megaSena")
         break
       case '1':
         console.log('Recebendo 1')
@@ -74,21 +110,21 @@ const LotoFacil = () => {
   
           <div className='bloco2-3'>
             <div className="blocoNumeros-3">
-              <div className="numeros-3">1</div>
-              <div className="numeros-3">2</div>
-              <div className="numeros-3">3</div>
-              <div className="numeros-3">4</div>
-              <div className="numeros-3">5</div>
-              <div className="numeros-3">6</div>
-              <div className="numeros-3">7</div>
-              <div className="numeros-3">8</div>
-              <div className="numeros-3">9</div>
-              <div className="numeros-3">10</div>
-              <div className="numeros-3">11</div>
-              <div className="numeros-3">12</div>
-              <div className="numeros-3">13</div>
-              <div className="numeros-3">14</div>
-              <div className="numeros-3">15</div>
+              <div className="numeros-3">{numero1}</div>
+              <div className="numeros-3">{numero2}</div>
+              <div className="numeros-3">{numero3}</div>
+              <div className="numeros-3">{numero4}</div>
+              <div className="numeros-3">{numero5}</div>
+              <div className="numeros-3">{numero6}</div>
+              <div className="numeros-3">{numero7}</div>
+              <div className="numeros-3">{numero8}</div>
+              <div className="numeros-3">{numero9}</div>
+              <div className="numeros-3">{numero10}</div>
+              <div className="numeros-3">{numero11}</div>
+              <div className="numeros-3">{numero12}</div>
+              <div className="numeros-3">{numero13}</div>
+              <div className="numeros-3">{numero14}</div>
+              <div className="numeros-3">{numero15}</div>
             </div>
             <div className="blocoDeTexto-3">
               <div className="texto-3">Esse sorteio é meramente ilustrativo e não possui nenhuma ligação com a CAIXA</div>

@@ -19,6 +19,10 @@ const Router = () => {
                 <Route exact path="/">
                     <MegaSena/>
                 </Route>
+                <Route exact path="/megaSena">
+                    <MegaSena/>
+                </Route>
+
                 <Route exact path="/quina">
                     <Quina/>
                 </Route>

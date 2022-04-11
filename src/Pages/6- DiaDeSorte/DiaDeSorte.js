@@ -1,11 +1,44 @@
 import "./DiaDeSorte.css";
 import React, { useState } from "react";
 import {useHistory} from "react-router-dom"
+import axios from "axios";
+
+
 
 const DiaDeSorte = () => {
-
   const history = useHistory()
   const [ PGSelect, setPGSelect ] = useState(1)
+
+
+
+  const ParDiaDeSorte = () => {
+    const [ numeros, setnumeros ] = useState([])
+  
+    axios.get("https://brainn-api-loterias.herokuapp.com/api/v1/concursos/440")
+    .then((res) => {
+      setnumeros(res.data.numeros)
+    })
+    .catch(() =>{
+      ParDiaDeSorte()
+    })
+    return numeros
+  }
+
+  const numero1 = ParDiaDeSorte()[0]
+  const numero2 = ParDiaDeSorte()[1]
+  const numero3 = ParDiaDeSorte()[2]
+  const numero4 = ParDiaDeSorte()[3]
+  const numero5 = ParDiaDeSorte()[4]
+  const numero6 = ParDiaDeSorte()[5]
+  const numero7 = ParDiaDeSorte()[6]
+  const numero8 = ParDiaDeSorte()[7]
+  const numero9 = ParDiaDeSorte()[8]
+  const numero10 = ParDiaDeSorte()[9]
+  const numero11 = ParDiaDeSorte()[10]
+  const numero12 = ParDiaDeSorte()[11]
+  
+
+
 
 
   const irParaPagina = (url) => {
@@ -22,7 +55,7 @@ const DiaDeSorte = () => {
     switch (event.target.value) {
       case '0':
         console.log('Recebendo 0');
-        irParaPagina("/")
+        irParaPagina("/megaSena")
         break
       case '1':
         console.log('Recebendo 1')
@@ -74,18 +107,18 @@ const DiaDeSorte = () => {
   
           <div className='bloco2-6'>
             <div className="blocoNumeros-6">
-              <div className="numeros-6">2</div>
-              <div className="numeros-6">3</div>
-              <div className="numeros-6">4</div>
-              <div className="numeros-6">1</div>
-              <div className="numeros-6">5</div>
-              <div className="numeros-6">6</div>
-              <div className="numeros-6">7</div>
-              <div className="numeros-6">8</div>
-              <div className="numeros-6">9</div>
-              <div className="numeros-6">10</div>
-              <div className="numeros-6">11</div>
-              <div className="numeros-6">12</div>
+              <div className="numeros-6">{numero1}</div>
+              <div className="numeros-6">{numero2}</div>
+              <div className="numeros-6">{numero3}</div>
+              <div className="numeros-6">{numero4}</div>
+              <div className="numeros-6">{numero5}</div>
+              <div className="numeros-6">{numero6}</div>
+              <div className="numeros-6">{numero7}</div>
+              <div className="numeros-6">{numero8}</div>
+              <div className="numeros-6">{numero9}</div>
+              <div className="numeros-6">{numero10}</div>
+              <div className="numeros-6">{numero11}</div>
+              <div className="numeros-6">{numero12}</div>
             </div>
             <div className="blocoDeTexto-6">
               <div className="texto-6">Esse sorteio é meramente ilustrativo e não possui nenhuma ligação com a CAIXA</div>

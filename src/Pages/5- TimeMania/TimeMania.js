@@ -1,13 +1,38 @@
 import "./TimeMania.css";
 import React, { useState } from "react";
 import {useHistory} from "react-router-dom"
+import axios from "axios";
+
+
 
 const TimeMania = () => {
-
-
   const history = useHistory()
   const [ PGSelect, setPGSelect ] = useState(1)
 
+
+
+  const ParTimeMania = () => {
+    const [ numeros, setnumeros ] = useState([])
+  
+    axios.get("https://brainn-api-loterias.herokuapp.com/api/v1/concursos/1622")
+    .then((res) => {
+      setnumeros(res.data.numeros)
+    })
+    .catch((err) =>{
+      ParTimeMania()
+    })
+    return numeros
+  }
+
+  const numero1 = ParTimeMania()[0]
+  const numero2 = ParTimeMania()[1]
+  const numero3 = ParTimeMania()[2]
+  const numero4 = ParTimeMania()[3]
+  const numero5 = ParTimeMania()[4]
+  const numero6 = ParTimeMania()[5]
+  const numero7 = ParTimeMania()[6]
+  const numero8 = ParTimeMania()[7]
+  
 
   const irParaPagina = (url) => {
     history.push(`${url}`)
@@ -23,7 +48,7 @@ const TimeMania = () => {
     switch (event.target.value) {
       case '0':
         console.log('Recebendo 0');
-        irParaPagina("/")
+        irParaPagina("/megaSena")
         break
       case '1':
         console.log('Recebendo 1')
@@ -76,13 +101,13 @@ const TimeMania = () => {
   
           <div className='bloco2-5'>
             <div className="blocoNumeros-5">
-              <div className="numeros-5">1</div>
-              <div className="numeros-5">2</div>
-              <div className="numeros-5">3</div>
-              <div className="numeros-5">4</div>
-              <div className="numeros-5">5</div>
-              <div className="numeros-5">6</div>
-              <div className="numeros-5">7</div>
+              <div className="numeros-5">{numero1}</div>
+              <div className="numeros-5">{numero2}</div>
+              <div className="numeros-5">{numero3}</div>
+              <div className="numeros-5">{numero4}</div>
+              <div className="numeros-5">{numero5}</div>
+              <div className="numeros-5">{numero6}</div>
+              <div className="numeros-5">{numero7}</div>
             </div>
             <div className="blocoDeTexto-5">
               <div className="texto-5">Esse sorteio é meramente ilustrativo e não possui nenhuma ligação com a CAIXA</div>
