@@ -1,11 +1,35 @@
 import "./MegaSena.css";
 import React, { useState } from "react";
 import {useHistory} from "react-router-dom"
+import axios from "axios";
+
 
 
 const MegaSena = () => {
   const history = useHistory()
   const [ PGSelect, setPGSelect ] = useState(1)
+
+
+ 
+  const ParMegaSena = () => {
+    const [ numeros, setnumeros ] = useState([])
+  
+    axios.get("https://brainn-api-loterias.herokuapp.com/api/v1/concursos/2359")
+    .then((res) => {
+      setnumeros(res.data.numeros)
+    })
+    .catch((err) =>{
+      ParMegaSena()
+    })
+    return numeros
+  }
+
+  const numero1 = ParMegaSena()[0]
+  const numero2 = ParMegaSena()[1]
+  const numero3 = ParMegaSena()[2]
+  const numero4 = ParMegaSena()[3]
+  const numero5 = ParMegaSena()[4]
+  const numero6 = ParMegaSena()[5]
 
 
   const irParaPagina = (url) => {
@@ -76,12 +100,12 @@ const MegaSena = () => {
   
           <div className='bloco2-1'>
             <div className="blocoNumeros-1">
-              <div className="numeros-1">1</div>
-              <div className="numeros-1">2</div>
-              <div className="numeros-1">3</div>
-              <div className="numeros-1">4</div>
-              <div className="numeros-1">5</div>
-              <div className="numeros-1">6</div>
+              <div className="numeros-1">{numero1}</div>
+              <div className="numeros-1">{numero2}</div>
+              <div className="numeros-1">{numero3}</div>
+              <div className="numeros-1">{numero4}</div>
+              <div className="numeros-1">{numero5}</div>
+              <div className="numeros-1">{numero6}</div>
             </div>
             <div className="blocoDeTexto-1">
               <div className="texto">Esse sorteio é meramente ilustrativo e não possui nenhuma ligação com a CAIXA</div>

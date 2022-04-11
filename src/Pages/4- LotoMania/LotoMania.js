@@ -1,15 +1,52 @@
 import "./LotoMania.css";
 import React, { useState } from "react";
 import {useHistory} from "react-router-dom"
+import axios from "axios";
+
 
 
 const LotoMania = () => {
-
-
   const history = useHistory()
   const [ PGSelect, setPGSelect ] = useState(1)
 
 
+
+  const ParLotoMania = () => {
+    const [ numeros, setnumeros ] = useState([])
+  
+    axios.get("https://brainn-api-loterias.herokuapp.com/api/v1/concursos/2167")
+    .then((res) => {
+      setnumeros(res.data.numeros)
+    })
+    .catch((err) =>{
+      ParLotoMania()
+    })
+    return numeros
+  }
+
+  const numero1 = ParLotoMania()[0]
+  const numero2 = ParLotoMania()[1]
+  const numero3 = ParLotoMania()[2]
+  const numero4 = ParLotoMania()[3]
+  const numero5 = ParLotoMania()[4]
+  const numero6 = ParLotoMania()[5]
+  const numero7 = ParLotoMania()[6]
+  const numero8 = ParLotoMania()[7]
+  const numero9 = ParLotoMania()[8]
+  const numero10 = ParLotoMania()[9]
+  const numero11 = ParLotoMania()[10]
+  const numero12 = ParLotoMania()[11]
+  const numero13 = ParLotoMania()[12]
+  const numero14 = ParLotoMania()[13]
+  const numero15 = ParLotoMania()[14]
+  const numero16 = ParLotoMania()[15]
+  const numero17 = ParLotoMania()[16]
+  const numero18 = ParLotoMania()[17]
+  const numero19 = ParLotoMania()[18]
+  const numero20 = ParLotoMania()[19]
+
+
+  
   const irParaPagina = (url) => {
     history.push(`${url}`)
   }
@@ -24,7 +61,7 @@ const LotoMania = () => {
     switch (event.target.value) {
       case '0':
         console.log('Recebendo 0');
-        irParaPagina("/")
+        irParaPagina("/megaSena")
         break
       case '1':
         console.log('Recebendo 1')
@@ -78,26 +115,26 @@ const LotoMania = () => {
   
           <div className='bloco2-4'>
             <div className="blocoNumeros-4">
-              <div className="numeros-4">1</div>
-              <div className="numeros-4">2</div>
-              <div className="numeros-4">3</div>
-              <div className="numeros-4">4</div>
-              <div className="numeros-4">5</div>
-              <div className="numeros-4">6</div>
-              <div className="numeros-4">7</div>
-              <div className="numeros-4">8</div>
-              <div className="numeros-4">9</div>
-              <div className="numeros-4">10</div>
-              <div className="numeros-4">11</div>
-              <div className="numeros-4">12</div>
-              <div className="numeros-4">13</div>
-              <div className="numeros-4">14</div>
-              <div className="numeros-4">15</div>
-              <div className="numeros-4">16</div>
-              <div className="numeros-4">17</div>
-              <div className="numeros-4">18</div>
-              <div className="numeros-4">19</div>
-              <div className="numeros-4">20</div>
+              <div className="numeros-4">{numero1}</div>
+              <div className="numeros-4">{numero2}</div>
+              <div className="numeros-4">{numero3}</div>
+              <div className="numeros-4">{numero4}</div>
+              <div className="numeros-4">{numero5}</div>
+              <div className="numeros-4">{numero6}</div>
+              <div className="numeros-4">{numero7}</div>
+              <div className="numeros-4">{numero8}</div>
+              <div className="numeros-4">{numero9}</div>
+              <div className="numeros-4">{numero10}</div>
+              <div className="numeros-4">{numero11}</div>
+              <div className="numeros-4">{numero12}</div>
+              <div className="numeros-4">{numero13}</div>
+              <div className="numeros-4">{numero14}</div>
+              <div className="numeros-4">{numero15}</div>
+              <div className="numeros-4">{numero16}</div>
+              <div className="numeros-4">{numero17}</div>
+              <div className="numeros-4">{numero18}</div>
+              <div className="numeros-4">{numero19}</div>
+              <div className="numeros-4">{numero20}</div>
             </div>
             <div className="blocoDeTexto-4">
               <div className="texto-4">Esse sorteio é meramente ilustrativo e não possui nenhuma ligação com a CAIXA</div>

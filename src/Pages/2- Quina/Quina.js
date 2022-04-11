@@ -1,11 +1,34 @@
 import "./Quina.css";
 import React, { useState } from "react";
 import {useHistory} from "react-router-dom"
-
+import axios from "axios";
 
 const Quina = () => {
   const history = useHistory()
   const [ PGSelect, setPG1Select ] = useState(2)
+
+
+
+  const ParQuina = () => {
+    const [ numeros, setnumeros ] = useState([])
+  
+    axios.get("https://brainn-api-loterias.herokuapp.com/api/v1/concursos/5534")
+    .then((res) => {
+      setnumeros(res.data.numeros)
+    })
+    .catch((err) =>{
+      ParQuina()
+    })
+    return numeros
+  }
+
+  const numero1 = ParQuina()[0]
+  const numero2 = ParQuina()[1]
+  const numero3 = ParQuina()[2]
+  const numero4 = ParQuina()[3]
+  const numero5 = ParQuina()[4]
+
+
 
 
   const irParaPagina = (url) => {
@@ -22,7 +45,7 @@ const Quina = () => {
     switch (event.target.value) {
       case '0':
         console.log('Recebendo 0');
-        irParaPagina("/")
+        irParaPagina("/megaSena")
         break
       case '1':
         console.log('Recebendo 1')
@@ -75,11 +98,11 @@ const Quina = () => {
   
           <div className='bloco2-2'>
             <div className="blocoNumeros-2">
-              <div className="numeros-2">1</div>
-              <div className="numeros-2">2</div>
-              <div className="numeros-2">3</div>
-              <div className="numeros-2">4</div>
-              <div className="numeros-2">5</div>
+              <div className="numeros-2">{numero1}</div>
+              <div className="numeros-2">{numero2}</div>
+              <div className="numeros-2">{numero3}</div>
+              <div className="numeros-2">{numero4}</div>
+              <div className="numeros-2">{numero5}</div>
             </div>
             <div className="blocoDeTexto-2">
               <div className="texto-2">Esse sorteio é meramente ilustrativo e não possui nenhuma ligação com a CAIXA</div>
