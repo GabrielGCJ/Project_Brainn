@@ -2,8 +2,7 @@ import "./MegaSena.css";
 import React, { useState } from "react";
 import {useHistory} from "react-router-dom"
 import axios from "axios";
-
-
+import imageLoto from "../../Images/logoSena.png"
 
 const MegaSena = () => {
   const history = useHistory()
@@ -93,7 +92,7 @@ const MegaSena = () => {
                 </select>
               </div>
               <div>
-                <img src="https://www.mazusoft.com.br/mega/images/logo-mega-sena.png"></img>
+                <img src={imageLoto}></img>
                 <h1>Mega-Sena</h1>
               </div>    
             </div>
