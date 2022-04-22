@@ -2,7 +2,7 @@ import "./DiaDeSorte.css";
 import React, { useState } from "react";
 import {useHistory} from "react-router-dom"
 import axios from "axios";
-
+import imageLoto from "../../Images/logoSena.png"
 
 
 const DiaDeSorte = () => {
@@ -100,7 +100,7 @@ const DiaDeSorte = () => {
                 </select>
               </div>
               <div>
-                <img src="https://www.mazusoft.com.br/mega/images/logo-mega-sena.png"></img>
+                <img src={imageLoto}></img>
                 <h1>DiaDeSorte</h1>
               </div>    
             </div>
