@@ -93,10 +93,14 @@ const TimeMania = () => {
                     <option value="5">Dia de Sorte</option>
                 </select>
               </div>
-              <div>
+              <div className="imagemLoto">
                 <img src={imageLoto}></img>
+              </div>
+
+              <div>
                 <h1>TimeMania</h1>
-              </div>    
+              </div>
+
             </div>
           </div>
   
