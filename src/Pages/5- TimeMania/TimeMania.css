@@ -19,8 +19,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding-bottom: 150px;
-  
+        padding-bottom: 150px;  
     }
   
   
@@ -68,6 +67,13 @@
         align-items: center;
         justify-content: center;
         text-align: center;
+    }
+
+    .imagemLoto{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 7px;
     }
 
 }
@@ -149,5 +155,12 @@
         align-items: center;
         justify-content: center;
         text-align: center;
+    }
+
+    .imagemLoto{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 7px;
     }
 }

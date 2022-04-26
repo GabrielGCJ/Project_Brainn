@@ -71,6 +71,12 @@
         justify-content: center;
         text-align: center;
     }
+    .imagemLoto{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 7px;
+    }
 }
 
 @media screen and ( min-device-width : 250px ) and (max-device-width : 480px) {
@@ -144,6 +150,15 @@
         justify-content: center;
         text-align: center;
     }
+
+    .imagemLoto{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 7px;
+
+    }
+    
 
 }
 /* .divmae1{
@@ -230,6 +245,10 @@ background-color: brown;
         text-align: center;
     }
 
-
-    
+    .imagemLoto{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 7px;
+    }    
 }

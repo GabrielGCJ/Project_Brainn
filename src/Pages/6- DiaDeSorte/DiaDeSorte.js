@@ -99,10 +99,14 @@ const DiaDeSorte = () => {
                     <option value="5">Dia de Sorte</option>
                 </select>
               </div>
-              <div>
+              <div className="imagemLoto">
                 <img src={imageLoto}></img>
+              </div>
+
+              <div>
                 <h1>DiaDeSorte</h1>
-              </div>    
+              </div>
+
             </div>
           </div>
   
