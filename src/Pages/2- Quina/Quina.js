@@ -8,8 +8,6 @@ const Quina = () => {
   const history = useHistory()
   const [ PGSelect, setPG1Select ] = useState(2)
 
-
-
   const ParQuina = () => {
     const [ numeros, setnumeros ] = useState([])
   
@@ -90,18 +88,15 @@ const Quina = () => {
                     <option value="4">Time-Mania</option>
                     <option value="5">Dia de Sorte</option>
                 </select>
-              </div>
+              </div>              
               <div className="imagemLoto">
                 <img src={imageLoto}></img>
               </div>
-
               <div>
                 <h1>Quina</h1>
               </div>
-
             </div>
-          </div>
-  
+          </div>  
           <div className='bloco2-2'>
             <div className="blocoNumeros-2">
               <div className="numeros-2">{numero1}</div>

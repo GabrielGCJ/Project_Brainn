@@ -9,8 +9,6 @@ const LotoMania = () => {
   const history = useHistory()
   const [ PGSelect, setPGSelect ] = useState(1)
 
-
-
   const ParLotoMania = () => {
     const [ numeros, setnumeros ] = useState([])
   
@@ -94,8 +92,7 @@ const LotoMania = () => {
 
     return (
       <div className='divmae-4'>
-          <div className='bloco1-4'>
-  
+          <div className='bloco1-4'>  
             <div className='blocoInter-4'>
               <div className='botaoselect-4'>
                 <select name="LotoMania" id="LotoMania" onChange={selectChange}>
@@ -110,14 +107,11 @@ const LotoMania = () => {
               <div className="imagemLoto">
                 <img src={imageLoto}></img>
               </div>
-
               <div>
                 <h1>LotoMania</h1>
               </div>
-
             </div>
-          </div>
-  
+          </div>  
           <div className='bloco2-4'>
             <div className="blocoNumeros-4">
               <div className="numeros-4">{numero1}</div>

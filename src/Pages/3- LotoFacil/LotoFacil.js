@@ -7,9 +7,7 @@ import imageLoto from "../../Images/logoSena.png"
 
 const LotoFacil = () => {
   const history = useHistory()
-  const [ PGSelect, setPGSelect ] = useState(1)
-
-
+  const [ PGSelect, setPGSelect ] = useState(1)  
 
   const ParLotoFacil = () => {
     const [ numeros, setnumeros ] = useState([])
@@ -89,8 +87,7 @@ const LotoFacil = () => {
 
     return (
       <div className='divmae-3'>
-          <div className='bloco1-3'>
-  
+          <div className='bloco1-3'>  
             <div className='blocoInter-3'>
               <div className='botaoselect-3'>
                 <select name="LotoFacil" id="LotoFacil" onChange={selectChange}>
@@ -105,14 +102,11 @@ const LotoFacil = () => {
               <div className="imagemLoto">
                 <img src={imageLoto}></img>
               </div>
-
               <div>
                 <h1>LotoFacil</h1>
               </div>
-
             </div>
-          </div>
-  
+          </div>  
           <div className='bloco2-3'>
             <div className="blocoNumeros-3">
               <div className="numeros-3">{numero1}</div>

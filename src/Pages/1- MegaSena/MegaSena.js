@@ -5,13 +5,12 @@ import axios from "axios";
 import imageLoto from "../../Images/logoSena.png"
 
 const MegaSena = () => {
+
   const history = useHistory()
   const [ PGSelect, setPGSelect ] = useState(1)
 
-
- 
   const ParMegaSena = () => {
-    const [ numeros, setnumeros ] = useState([])
+  const [ numeros, setnumeros ] = useState([])
   
     axios.get("https://brainn-api-loterias.herokuapp.com/api/v1/concursos/2359")
     .then((res) => {
@@ -72,8 +71,6 @@ const MegaSena = () => {
         console.log(`Sorry`);
     }
   }
-  
-
 
 
     return (
@@ -83,25 +80,22 @@ const MegaSena = () => {
             <div className='blocoInter-1'>
               <div className='botaoselect-1'>
                 <select name="Mega-Sena" id="Mega-Sena" onChange={selectChange}>
-                    <option value="0">Mega-Sena</option>
-                    <option value="1">Quina</option>
-                    <option value="2">Loto-Facil</option>
-                    <option value="3">Loto-Mania</option>
-                    <option value="4">Time-Mania</option> 
-                    <option value="5">Dia de Sorte</option>
+                  <option value="0">Mega-Sena</option>
+                  <option value="1">Quina</option>
+                  <option value="2">Loto-Facil</option>
+                  <option value="3">Loto-Mania</option>
+                  <option value="4">Time-Mania</option> 
+                  <option value="5">Dia de Sorte</option>
                 </select>
               </div>
               <div className="imagemLoto">                
                 <img src={imageLoto}></img>
               </div>
-
               <div>
                 <h1>Mega-Sena</h1>
               </div>
-
             </div>
-          </div>
-  
+          </div>  
           <div className='bloco2-1'>
             <div className="blocoNumeros-1">
               <div className="numeros-1">{numero1}</div>
@@ -117,6 +111,6 @@ const MegaSena = () => {
           </div>
       </div>
     );
-  }
+}
   
   export default MegaSena;
