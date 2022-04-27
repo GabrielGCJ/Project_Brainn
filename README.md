@@ -6,6 +6,6 @@
   
 > API: https://brainn-api-loterias.herokuapp.com
   
-> gbBrain-purpose.surge.sh
+> https://gbBrain-purpose.surge.sh
 
-<a href="gbBrain-purpose.surge.sh">Open Test</a>
+<!-- <a href="gbBrain-purpose.surge.sh">Open Test</a> -->
