@@ -9,8 +9,6 @@ const DiaDeSorte = () => {
   const history = useHistory()
   const [ PGSelect, setPGSelect ] = useState(1)
 
-
-
   const ParDiaDeSorte = () => {
     const [ numeros, setnumeros ] = useState([])
   
@@ -31,15 +29,7 @@ const DiaDeSorte = () => {
   const numero5 = ParDiaDeSorte()[4]
   const numero6 = ParDiaDeSorte()[5]
   const numero7 = ParDiaDeSorte()[6]
-  const numero8 = ParDiaDeSorte()[7]
-  const numero9 = ParDiaDeSorte()[8]
-  const numero10 = ParDiaDeSorte()[9]
-  const numero11 = ParDiaDeSorte()[10]
-  const numero12 = ParDiaDeSorte()[11]
   
-
-
-
 
   const irParaPagina = (url) => {
     history.push(`${url}`)
@@ -49,8 +39,6 @@ const DiaDeSorte = () => {
   const selectChange = (event) => {
     setPGSelect(event.target.value)
     console.log(event.target.value)
-
-
   
     switch (event.target.value) {
       case '0':
@@ -102,14 +90,11 @@ const DiaDeSorte = () => {
               <div className="imagemLoto">
                 <img src={imageLoto}></img>
               </div>
-
               <div>
                 <h1>DiaDeSorte</h1>
               </div>
-
             </div>
-          </div>
-  
+          </div>  
           <div className='bloco2-6'>
             <div className="blocoNumeros-6">
               <div className="numeros-6">{numero1}</div>
@@ -118,12 +103,7 @@ const DiaDeSorte = () => {
               <div className="numeros-6">{numero4}</div>
               <div className="numeros-6">{numero5}</div>
               <div className="numeros-6">{numero6}</div>
-              <div className="numeros-6">{numero7}</div>
-              {/* <div className="numeros-6">{numero8}</div>
-              <div className="numeros-6">{numero9}</div>
-              <div className="numeros-6">{numero10}</div>
-              <div className="numeros-6">{numero11}</div>
-              <div className="numeros-6">{numero12}</div> */}
+              <div className="numeros-6">{numero7}</div>              
             </div>
             <div className="blocoDeTexto-6">
               <div className="texto-6">Esse sorteio é meramente ilustrativo e não possui nenhuma ligação com a CAIXA</div>
