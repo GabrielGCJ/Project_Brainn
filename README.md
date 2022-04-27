@@ -8,4 +8,4 @@
   
 > TEST https://gbBrain-purpose.surge.sh
 
-<a href="gbBrain-purpose.surge.sh">Open Test</a>
+<a href="https://gbBrain-purpose.surge.sh">Open Test</a>
