@@ -79,6 +79,7 @@ const MegaSena = () => {
   
             <div className='blocoInter-1'>
               <div className='botaoselect-1'>
+
                 <select name="Mega-Sena" id="Mega-Sena" onChange={selectChange}>
                   <option value="0">Mega-Sena</option>
                   <option value="1">Quina</option>
@@ -87,13 +88,18 @@ const MegaSena = () => {
                   <option value="4">Time-Mania</option> 
                   <option value="5">Dia de Sorte</option>
                 </select>
+
               </div>
-              <div className="imagemLoto">                
-                <img src={imageLoto}></img>
-              </div>
-              <div>
+
+              <div className="blocoLogo-1">                
+                <img className="imagemLoto" src={imageLoto}></img>
                 <h1>Mega-Sena</h1>
               </div>
+
+              <div>
+                <h3>Sua chance de acertar é baixa</h3>
+              </div>
+
             </div>
           </div>  
           <div className='bloco2-1'>
